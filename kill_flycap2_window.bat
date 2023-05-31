@@ -1,0 +1,1 @@
+taskkill /IM "FlyCapture2SimpleGUI_MFC.exe" /F

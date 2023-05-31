@@ -1,0 +1,16 @@
+So for controlling our camera i initially tried to use Pyflycap2 which is a python implementation of their older software (FLYCAP2) which I think is discontinued. You should be able to install it to your python environment pretty easy:
+http://matham.github.io/pyflycap2/index.html
+
+however, this package (Pyflycap2) has pretty limited functionality
+
+Instead, download the main software installed so that I can use some of the GUI elements to interact with the camera settings instead of just the python code.
+
+Download the full SDK (software development kit) as well as the matching python distribution (PyCapture2) 
+https://www.flir.com/support-center/iis/machine-vision/downloads/spinnaker-sdk-flycapture-and-firmware-download/
+--- it takes you to a weird box site to download... super old school. download and install the latest windows version.
+Install the SDK, then make sure you have python installed (anaconda distribution preferable). Create a new environment in anaconda with the correct python version (3.6 appears to be the latest) that matches the PyCapture2 version. Then, run the MSI file for PyCapture2 and install Pycapture2 directly into the python parent folder for that environment. eg: "C:\Users\User\anaconda3\envs\pycapenv"
+Then, in this environment also 
+
+pip install tk numpy cython setuptools 
+
+Then, I have attached all the files I use to interact with pyflycap2. Run the bat file 'PyCamRecord.bat' and it should launch an imaging window as well as a python GUI that I built. You should change the paths in all of the BAT files so that they are correct first depending on where you installed Flycapture 2 and where you placed the folder with these python scripts. 
